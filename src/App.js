@@ -25,9 +25,7 @@ class App extends Component {
       number: data.number,
     };
 
-    const result = this.state.contacts.some(
-      value => value.name === contact.name,
-    );
+    const result = this.state.contacts.some(value => value.id === contact.id);
 
     if (!result) {
       this.setState(prevState => ({
